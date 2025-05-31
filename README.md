@@ -2,9 +2,9 @@
 
 ## 2025/5/31
 
-从jhipster搭建的框架开始
+**从jhipster搭建的框架开始**
 
-jhipster选项：
+**jhipster选项：**
 
 ```cmd
 √ What is the base name of your application? kotobaTube
@@ -31,3 +31,4 @@ OpenAPI-generator
 √ Please choose additional languages to install Japanese
 ```
 
+因为设置了认证，所以前端需要访问KotobaTube：http://192.168.2.253:9000/

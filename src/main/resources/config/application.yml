@@ -95,7 +95,7 @@ spring:
     name: kotobaTube
   docker:
     compose:
-      enabled: true
+      enabled: false
       lifecycle-management: start-only
       file: src/main/docker/services.yml
   profiles:
@@ -214,7 +214,9 @@ jhipster:
     license-url:
   security:
     content-security-policy: "default-src 'self'; frame-src 'self' data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://storage.googleapis.com; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com data:"
-
+    authentication:
+      jwt:
+        base64-secret: 'ZmNmZGRkOGUzMTk5YjVhZjJmMTUwNmM0ZTY2NWRjODg1ZDNjZGRmZmNmODVjYTQxYWYyZWFiYTQ5NjBjZGI3ZGQ4YjE2NjIxM2YzOTQ0ZWZmYTVmNzgxOWIyNTU1YmEzODkwOWQzNjQ5NDkzYzFkY2U2ZmZiOTlkZDFmOTJjNzE='
 # jhipster-needle-add-application-yaml-document
 ---
 # ===================================================================

@@ -56,7 +56,7 @@ let config = defineConfig({
       ['/api', '/management', '/v3/api-docs', '/websocket'].map(res => [
         res,
         {
-          target: 'http://localhost:8080',
+          target: 'http://192.168.2.253:8080',
           ws: res === '/websocket',
         },
       ]),

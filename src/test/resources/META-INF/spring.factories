@@ -1,0 +1,3 @@
+org.springframework.test.context.ContextCustomizerFactory = \
+    com.chenhy.config.SqlTestContainersSpringContextCustomizerFactory,com.\
+    chenhy.config.RedisTestContainersSpringContextCustomizerFactory

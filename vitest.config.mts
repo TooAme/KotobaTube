@@ -5,6 +5,9 @@ import viteConfig from './vite.config.mjs';
 export default mergeConfig(
   viteConfig,
   defineConfig({
+    server: {
+      allowedHosts: 'all', // 允许所有域名访问（开发环境适用）
+    },
     resolve: {
       alias: {
         vue: 'vue',

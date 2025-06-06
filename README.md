@@ -31,4 +31,24 @@ OpenAPI-generator
 √ Please choose additional languages to install Japanese
 ```
 
-因为设置了认证，所以前端需要访问KotobaTube：http://192.168.2.253:9000/
+**因为设置了认证，所以前端需要访问从日志里看到的公网ip：http://192.168.xxx.xxx:9000/**
+
+**也要切换vite.config.mts中第64行的代理ip。**
+
+**启动前开启redis：**
+
+```cmd
+cd C:\Program Files\Redis
+redis-server.exe redis.windows.conf
+```
+
+**报错没有docker就重启ide。**
+
+**启动ngrok：**
+
+```cmd
+ngrok config add-authtoken 2y93YqqyzJ2zQi6YhjtlAI9XmsF_7Fw74J7yqdYuNx248Dmcc
+ngrok http http://192.168.xxx.xxx:9000
+```
+
+**随后修改vite.config,mts的第56行为ngrok提供的公网链接。**

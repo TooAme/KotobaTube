@@ -50,13 +50,17 @@ let config = defineConfig({
     APP_VERSION: `"${process.env.APP_VERSION ? process.env.APP_VERSION : 'DEV'}"`,
   },
   server: {
+    allowedHosts: [
+      'localhost',
+      'fca6-2409-8a1e-d50-5210-802d-37f-ee41-7ed4.ngrok-free.app', // 添加你的 ngrok 域名
+    ],
     host: true,
     port: 9000,
     proxy: Object.fromEntries(
       ['/api', '/management', '/v3/api-docs', '/websocket'].map(res => [
         res,
         {
-          target: 'http://192.168.2.253:8080',
+          target: 'http://192.168.1.3:8080',
           ws: res === '/websocket',
         },
       ]),
